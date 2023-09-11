@@ -1,0 +1,31 @@
+<div *ngIf="questions"
+ class="game-page">
+  <div class="top">
+    <app-question
+      *ngIf="!gameOver && currentQuestion"
+      [question]="currentQuestion"
+      (answer)="checkAnswer($event)"
+      class="question"
+    ></app-question>
+    <app-all-answers
+      *ngIf="gameOver"
+      [answers]="allAnswers"
+    ></app-all-answers>
+  </div>
+  <div class="bottom">
+    <div class="score">
+      <app-score [score]="score"></app-score>
+      <button
+        *ngIf="gameOver"
+        mat-raised-button
+        color="primary"
+        class="new-game"
+        (click)="startNewGame()"
+      >New game</button>
+    </div>
+    <app-notification
+      *ngIf="gameOver"
+      [notification]="notification"
+    ></app-notification>
+  </div>
+</div>

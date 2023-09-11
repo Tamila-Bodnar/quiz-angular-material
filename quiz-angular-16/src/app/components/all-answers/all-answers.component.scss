@@ -1,0 +1,25 @@
+.table-container {
+  height: 400px;
+  max-height: 100%;
+  overflow: auto;
+}
+
+.title {
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px;
+}
+
+.table {
+  padding: 20px 40px;
+  width: 100%;
+  max-height: 400px;
+}
+
+.mat-mdc-table {
+  width: 100%;
+  max-height: 300px;
+  overflow: auto;
+}

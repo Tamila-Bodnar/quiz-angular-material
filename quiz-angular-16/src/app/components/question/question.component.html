@@ -1,0 +1,15 @@
+<mat-card class="card">
+  <mat-card-title>
+    <p class="question-text">{{ question.question }}</p>
+  </mat-card-title>
+  <mat-card-actions>
+    <button
+      mat-raised-button
+      *ngFor="let option of question.content; trackBy: trackByIndex; let index = index;"
+      [value]="option"
+      (click)="onAnswerSelected(index)"
+      class="option">
+      {{ option }}
+    </button>
+  </mat-card-actions>
+</mat-card>
